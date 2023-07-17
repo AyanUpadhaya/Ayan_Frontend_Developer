@@ -3,7 +3,7 @@ import RocketSection from "../RocketSection/RocketSection";
 
 const Main = () => {
     return (
-        <main className="bg-dark text-light py-5">
+        <main className="bg-cs-dark text-light py-5">
             <RocketSection></RocketSection>
         </main>
     );

@@ -4,13 +4,13 @@ import './Header.css'
 import rocket from '../../assets/rocket.png'
 const Header = () => {
     return (
-        <header className='header'>
+        <header className='header' id='#top'>
             <Navigation></Navigation>
 
             <div className='background bg-dark'>
 
                 <section className='mt-5 pt-5 container'>
-                    <div className="d-flex flex-column flex-lg-row justify-content-between align-items-center">
+                    <div className="mt-5 mt-md-0 d-flex flex-md-row justify-content-between align-items-centert">
                         <div>
                             <div className="text-white">
                                 <h1 className="header-title display-1">Explore the Future</h1>
