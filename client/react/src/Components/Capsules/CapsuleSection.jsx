@@ -9,7 +9,6 @@ const CapsuleSection = () => {
     const [postsPerPage, setPostPerPage] = useState(10);
     const [searchFilter, setSearchFilter] = useState({
         status: '',
-        original_launch: '',
         type: ''
     })
 
@@ -40,7 +39,6 @@ const CapsuleSection = () => {
     const handleFilterChange = (e) => {
         setSearchFilter({...searchFilter,[e.target.name]:e.target.value})
         setCurrentPage(1)
-
     }
 
     return (

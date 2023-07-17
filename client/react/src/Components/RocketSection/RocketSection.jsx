@@ -4,9 +4,8 @@ import RocketCard from '../RocketCard/RocketCard';
 import { GlobalContext } from '../../ContextProvider/ContextProvider';
 
 const RocketSection = () => {
-    const { rockets, Loader, loading,setLoading } = useContext(GlobalContext);
+    const {rockets, Loader,} = useContext(GlobalContext);
     const [searchTerm, setSearchTerm] = useState('');
-    
     const [filteredRockets,setFilteredRockets] =useState([])
 
     //create copy of rockets when rockets are loaded
@@ -52,11 +51,6 @@ const RocketSection = () => {
 
     
 
-    if (loading) {
-        return <Loader />
-    }
-    
-
     return (
 
         <div className="container py-3 mt-5 position-relative" id="rockets">
@@ -88,6 +82,8 @@ const RocketSection = () => {
         </div>
 
     );
+
+    
 };
 
 export default RocketSection;
