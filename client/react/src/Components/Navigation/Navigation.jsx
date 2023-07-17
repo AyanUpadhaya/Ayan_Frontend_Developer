@@ -12,17 +12,17 @@ const Navigation = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav m-auto mt-2">
                             <li className="nav-item">
-                                <a className="nav-link text-white active" aria-current="page" href="#">Home</a>
+                                <a className="nav-link text-white active" aria-current="page" href="#top">HOME</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-white" href="#">Rockets</a>
+                                <a className="nav-link text-white" href="#rockets">ROCKETS</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-white" href="#">About</a>
+                                <a className="nav-link text-white" href="#about">ABOUT</a>
                             </li>
                         </ul>
                         <form className="d-flex" role="search">
-                            <button className="btn btn-outline-light rounded-0" type="submit">GET STARTED</button>
+                            <button className="btn btn-outline-light rounded-0">GET STARTED</button>
                         </form>
                     </div>
                 </div>
