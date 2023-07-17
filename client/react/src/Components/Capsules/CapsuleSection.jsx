@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { GlobalContext } from '../../ContextProvider/ContextProvider';
+import { Posts } from './Posts';
 
 const CapsuleSection = () => {
+    const {capsules,setCapsules} = useContext(GlobalContext);
+    const [currentPage,setCurrentPage] = useState(1);
+    const [postsPerPage,setPostPerPage] = useState(10);
+
+    const getIndexOfLastPost = currentPage * postsPerPage;
+    const getIndexOfFirstPost = getIndexOfLastPost - postsPerPage;
+    const currentPost = capsules.slice(getIndexOfFirstPost,getIndexOfLastPost);
+
     return (
-        <div>
-            
+        <div className="container py-3 mt-5 position-relative" id="capsules">
+
+            <div className="text-center">
+                <h2 className='display-3 fw-bold'>SpaceX Capsules</h2>
+                <p>Our Capsules</p>
+            </div>
+            <div className='mt-3 mb-3'>
+                <Posts posts={currentPost}></Posts>
+            </div>
+
         </div>
     );
 };
