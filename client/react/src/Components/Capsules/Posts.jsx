@@ -1,22 +1,16 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import PostsCard from './PostsCard'
+import PostModal from './PostModal'
 
 export const Posts = ({ posts }) => {
     return (
         <div className='w-100 m-auto'>
             <div className="mb-4 row">
                 {
-                    posts.map(post => <div key={post.id} className='col-12 col-md-4'>
-                        <div  className='card' style={{background:"#423529",color:"#fff",height:"200px"}}>
-                        <div class="card-body">
-                            <h5 class="card-title">{post.serial}</h5>
-                            <p class="card-text">
-                                Last Update:<br></br>
-                                {post.last_update}
-                            </p>
-                            <button class="mt-auto btn btn-outline-light">Show Details</button>
-                        </div>
-                    </div>
-                    </div>)
+                    posts.map((post,index) => <Fragment key={index}>
+                        <PostsCard key={post.id} post={post}></PostsCard>
+                        <PostModal key={`modal-${post.id}`} post={post}></PostModal>
+                    </Fragment>)
                 }
             </div>
         </div>

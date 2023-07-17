@@ -18,7 +18,7 @@ const Navigation = () => {
                                 <a className="nav-link text-white" href="#rockets">ROCKETS</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-white" href="#about">ABOUT</a>
+                                <a className="nav-link text-white" href="#capsules">CAPSULES</a>
                             </li>
                         </ul>
                         <form className="d-flex" role="search">
