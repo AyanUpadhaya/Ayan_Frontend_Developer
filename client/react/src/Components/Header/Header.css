@@ -1,0 +1,10 @@
+
+
+.header .background{
+    background:url('../../assets/header.jpg') no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    z-index: 40;
+    padding: 80px 0;
+}
