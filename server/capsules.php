@@ -1,22 +1,12 @@
 <?php
     require_once 'config.php';
+    require_once 'enviroment.php';
+    require 'apiHandler.php';
 
-    function get_all_capsules(){
-        $url = "https://api.spacexdata.com/v4/capsules";
-        $res = file_get_contents($url);
-
-        if($res!==false){
-            return  json_decode($res,JSON_PRETTY_PRINT);
-        }else{
-            return [];
-        }
-
-    
-
-    }
-
+    // Route the requests
     if($_SERVER['REQUEST_METHOD']==="GET"){
-        $capsules = get_all_capsules();
+        $api_handler = new APIHandler('https://api.spacexdata.com/v4/capsules');
+        $capsules = $api_handler->getAllData();
         echo json_encode($capsules);
     }else{
         http_response_code(405);
