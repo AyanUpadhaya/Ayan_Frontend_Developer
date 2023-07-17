@@ -2,15 +2,20 @@ import React from 'react'
 
 export const Posts = ({ posts }) => {
     return (
-        <div>
-            <div className="mb-4">
+        <div className='w-100 m-auto'>
+            <div className="mb-4 row">
                 {
-                    posts.map(post => <div key={post.id} className='card'>
+                    posts.map(post => <div key={post.id} className='col-12 col-md-4'>
+                        <div  className='card' style={{background:"#423529",color:"#fff",height:"200px"}}>
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">{post.serial}</h5>
+                            <p class="card-text">
+                                Last Update:<br></br>
+                                {post.last_update}
+                            </p>
+                            <button class="mt-auto btn btn-outline-light">Show Details</button>
                         </div>
+                    </div>
                     </div>)
                 }
             </div>

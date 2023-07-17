@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { GlobalContext } from '../../ContextProvider/ContextProvider';
 import { Posts } from './Posts';
+import Pagination from '../Pagination/Pagination';
 
 const CapsuleSection = () => {
     const {capsules,setCapsules} = useContext(GlobalContext);
@@ -11,6 +12,12 @@ const CapsuleSection = () => {
     const getIndexOfFirstPost = getIndexOfLastPost - postsPerPage;
     const currentPost = capsules.slice(getIndexOfFirstPost,getIndexOfLastPost);
 
+    //change the page
+    const paginate =(pageNumber)=>{
+     
+        setCurrentPage(pageNumber)
+    }
+
     return (
         <div className="container py-3 mt-5 position-relative" id="capsules">
 
@@ -20,6 +27,8 @@ const CapsuleSection = () => {
             </div>
             <div className='mt-3 mb-3'>
                 <Posts posts={currentPost}></Posts>
+
+                <Pagination postsPerPage={postsPerPage} totalPosts={capsules.length} paginate={paginate}></Pagination>
             </div>
 
         </div>
