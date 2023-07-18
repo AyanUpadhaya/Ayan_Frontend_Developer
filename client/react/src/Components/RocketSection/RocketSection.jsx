@@ -44,6 +44,10 @@ const RocketSection = () => {
         <p>Believe in Future</p>
       </div>
 
+      <div>
+        <input type="text" name="" id="" className='form-control' placeholder='Search By Name' onChange={(e)=>setSearchTerm(e.target.value)} />
+      </div>
+
       <div className="d-flex gap-2">
         <div className="mb-3">
           <label htmlFor="activeFilter" className="form-label">
