@@ -9,7 +9,7 @@
   
   body {
     background: #eee;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 14px;
     color: #000;
     margin: 0;
@@ -24,12 +24,11 @@
   .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
-  
-    /* Center slide text vertically */
-    display: flex;
+    padding: 10px;
+    background: #454343;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
   }
   
   .swiper-slide img {

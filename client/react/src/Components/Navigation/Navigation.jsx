@@ -20,6 +20,9 @@ const Navigation = () => {
                             <li className="nav-item">
                                 <a className="nav-link text-white" href="#capsules">CAPSULES</a>
                             </li>
+                            <li className="nav-item">
+                                <a className="nav-link text-white" href="#crews">CREWS</a>
+                            </li>
                         </ul>
                         <form className="d-flex" role="search">
                             <button className="btn btn-outline-light rounded-0">GET STARTED</button>

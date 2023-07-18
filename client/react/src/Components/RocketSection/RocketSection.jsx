@@ -2,7 +2,7 @@ import React, { Fragment, useContext, useEffect, useState } from 'react';
 import Modal from '../Modal/Modal';
 import RocketCard from '../RocketCard/RocketCard';
 import { GlobalContext } from '../../ContextProvider/ContextProvider';
-
+import './Rockets.css'
 const RocketSection = () => {
     const {rockets, Loader,} = useContext(GlobalContext);
     const [searchTerm, setSearchTerm] = useState('');

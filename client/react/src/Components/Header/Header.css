@@ -1,5 +1,4 @@
 
-
 .header .background{
     background:url('../../assets/header.jpg') no-repeat;
     background-size: cover;
@@ -10,6 +9,7 @@
 }
 .header_content{
     margin-bottom: 100px;
+    font-family: 'Oswald', sans-serif;
 }
 
 .header-title{
@@ -19,4 +19,12 @@
 .header-subtitle{
     font-size: 1.5rem;
     margin-bottom: 20px;
+}
+
+@media screen and (max-width:576px) {
+    .header-title{
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+    
 }

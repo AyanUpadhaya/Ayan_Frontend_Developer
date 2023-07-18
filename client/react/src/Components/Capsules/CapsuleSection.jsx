@@ -1,7 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { GlobalContext } from '../../ContextProvider/ContextProvider';
-import { Posts } from './Posts';
+import { Posts } from '../Posts/Posts';
 import Pagination from '../Pagination/Pagination';
+import './Capsulses.css'
+
+
 
 const CapsuleSection = () => {
     const { capsules, setCapsules } = useContext(GlobalContext);
