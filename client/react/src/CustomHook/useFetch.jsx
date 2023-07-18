@@ -6,7 +6,7 @@ const useFetch = (url) => {
         fetch(url,{
             method:'GET',
             headers: {
-                'Authorization': import.meta.env.VITE_ACCESS_TOKEN
+                'Authorization': "175b770301706c3a7e34ecf2f862cd1663934b696c43a6f0f9d8c08c2224fed7"
             }
         })
         .then(res => res.json())

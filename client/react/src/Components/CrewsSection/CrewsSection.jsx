@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 import './styles.css';
 
 // required modules
-import { FreeMode, Pagination } from 'swiper/modules';
+import { FreeMode, Pagination,Autoplay } from 'swiper/modules';
 import CrewCard from './CrewCard';
 import Loader from '../Loader/Loader';
 const CrewsSection = () => {
@@ -53,10 +53,15 @@ const CrewsSection = () => {
                     slidesPerView={3}
                     spaceBetween={30}
                     freeMode={true}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                      }}
                     pagination={{
                         clickable: true,
                     }}
-                    modules={[FreeMode, Pagination]}
+                    loop={true}
+                    modules={[FreeMode,Pagination,Autoplay]}
                     className="mySwiper py-5"
                 >
                     {

@@ -5,9 +5,9 @@ import useFetch from '../CustomHook/useFetch';
 
 export const GlobalContext = createContext(null);
 const ContextProvider = ({ children }) => {
-    const [rockets, setRockets] = useFetch('http://localhost/spacefox/server/rockets.php');
-    const [capsules, setCapsules] = useFetch('http://localhost/spacefox/server/capsules.php');
-    const [crews,setCrews] = useFetch('http://localhost/spacefox/server/crews.php')
+    const [rockets, setRockets] = useFetch('https://space-server-kohl.vercel.app/rockets');
+    const [capsules, setCapsules] = useFetch('https://space-server-kohl.vercel.app/capsules');
+    const [crews,setCrews] = useFetch('https://space-server-kohl.vercel.app/crews')
 
     
     
