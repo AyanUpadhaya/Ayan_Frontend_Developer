@@ -2,10 +2,10 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="text-center bg-dark text-light py-5">
+        <footer className="bg-dark text-light py-2 py-md-5 fs-5">
 
                 <section className="">
-                    <div className="container text-center text-md-start fs-4 mt-5">
+                    <div className="container mt-5">
           
                         <div className="row mt-3">
                  
@@ -15,8 +15,7 @@ const Footer = () => {
                                     <i className="fas fa-gem me-3"></i>SpaceX
                                 </h6>
                                 <p>
-                                    Here you can use rows and columns to organize your footer content. Lorem ipsum
-                                    dolor sit amet, consectetur adipisicing elit.
+                                The Space Exploration Technologies Corporation, commonly referred to as SpaceX, is an American spacecraft manufacturer.
                                 </p>
                             </div>
                  
@@ -45,7 +44,7 @@ const Footer = () => {
                   
                             <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                        
-                                <h6 className="text-uppercase fw-bold mb-4">
+                                <h6 className="text-uppercase mb-4">
                                     Useful links
                                 </h6>
                                 <p>
