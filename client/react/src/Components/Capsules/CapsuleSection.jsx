@@ -3,6 +3,7 @@ import { GlobalContext } from '../../ContextProvider/ContextProvider';
 import { Posts } from '../Posts/Posts';
 import Pagination from '../Pagination/Pagination';
 import './Capsulses.css'
+import Loader from '../Loader/Loader';
 
 
 
@@ -15,7 +16,7 @@ const CapsuleSection = () => {
         type: ''
     })
 
-    const { status, original_launch, type } = searchFilter
+    const { status, type } = searchFilter
 
     const getIndexOfLastPost = currentPage * postsPerPage;
     const getIndexOfFirstPost = getIndexOfLastPost - postsPerPage;
@@ -51,7 +52,8 @@ const CapsuleSection = () => {
                 <h2 className='display-3 fw-bold'>SpaceX Capsules</h2>
                 <p>Our Capsules</p>
             </div>
-            <div className='mt-3 mb-3'>
+            {
+                filteredCapsules.length === 0?<Loader/>:<div className='mt-3 mb-3'>
                 <div className="d-flex gap-2">
                 <div className="mb-3">
                     <label htmlFor="statusFilter" className="form-label">
@@ -92,6 +94,7 @@ const CapsuleSection = () => {
                 <Pagination postsPerPage={postsPerPage} totalPosts={capsules.length} paginate={paginate}></Pagination>
             </div>
 
+            }
         </div>
     );
 };

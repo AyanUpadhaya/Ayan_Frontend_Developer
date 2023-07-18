@@ -12,6 +12,7 @@ import './styles.css';
 // required modules
 import { FreeMode, Pagination } from 'swiper/modules';
 import CrewCard from './CrewCard';
+import Loader from '../Loader/Loader';
 const CrewsSection = () => {
     const { crews, } = useContext(GlobalContext)
     return (
@@ -22,7 +23,8 @@ const CrewsSection = () => {
                 <p>Our Crews</p>
             </div>
 
-            <div className="container">
+            {
+                crews.length===0?<Loader/>:<div className="container">
                 <Swiper
                     breakpoints={{
                    
@@ -65,6 +67,7 @@ const CrewsSection = () => {
 
             </div>
 
+            }
 
         </div>
     );
